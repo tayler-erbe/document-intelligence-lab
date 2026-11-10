@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142b36">
+<meta name="description" content="Tayler Erbe's Document Intelligence Lab: model evaluations, inference performance studies, data pipelines and solution designs for reading documents with local AI, each with its method and limits stated.">
+<title>Document Intelligence Lab · Tayler Erbe</title>
+<meta property="og:type" content="website"><meta property="og:title" content="Document Intelligence Lab · Tayler Erbe"><meta property="og:description" content="Model evaluations, performance studies, data pipelines and solution designs for local document AI. Every study states its method and its limits."><meta property="og:url" content="https://tayler-erbe.github.io/document-intelligence-lab/">
+<link rel="canonical" href="https://tayler-erbe.github.io/document-intelligence-lab/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="site.css"><link rel="stylesheet" href="lab.css"><script src="lab.js" defer></script></head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="site-header">
+<a href="./" class="brand" aria-label="Document Intelligence Lab home"><span class="brand-mark">DI<span>↗</span></span><span>Document<br><strong>Intelligence Lab</strong></span></a>
+<nav aria-label="Main navigation"><a href="#studies">Studies</a><a href="#practice">Practice areas</a><a href="#rules">How the Lab works</a><a href="#about">About</a></nav>
+<a class="repo-link" href="https://taylererbe.com/">taylererbe.com <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow">TAYLER ERBE / DOCUMENT INTELLIGENCE LAB</p>
+<h1>Test it before you trust it. <em>Then build it to be checked.</em></h1>
+<p class="hero-deck">This is where I evaluate AI models, measure what they cost to run, and design the pipelines that put them to work on real documents. Each study is a working answer to a practical question, and each one says how it was measured and what it does not show.</p>
+<p class="answer-line"><b>Short version:</b> pick a study by the question it answers. Lab briefs explain the decision in plain language; case studies and repositories hold the detail.</p>
+<div class="hero-actions">
+<a href="#studies" class="button primary">Browse the studies <span aria-hidden="true">↓</span></a>
+<a href="#rules" class="text-link">How the Lab works ↓</a>
+</div>
+<p class="author-line"><span><b>Tayler Erbe</b> · Data and AI engineer · evaluation, performance and pipelines for document AI. <a href="#about">About</a></span></p>
+</div>
+<div class="hero-figure">
+<div class="figure-top"><span>QUESTIONS THE LAB ANSWERS</span></div>
+<div class="hero-panel">
+<h2>Which model,<br>on what hardware,<br>at what cost?</h2>
+<ul>
+<li><span>Which model reads tables, scans and charts</span><b>evaluation</b></li>
+<li><span>Why a GPU sits idle, and how to fix it</span><b>performance</b></li>
+<li><span>How documents become checkable data</span><b>pipelines</b></li>
+<li><span>What to build, and what to skip</span><b>architecture</b></li>
+</ul>
+<a class="figure-source" href="#studies">See the studies <span>↓</span></a>
+</div>
+</div>
+</section>
+
+<section class="stat-strip" aria-label="Key facts">
+<div><strong>16</strong><span>studies, briefs and system designs collected here</span></div>
+<div><strong>5</strong><span>practice areas, from model evaluation to consulting</span></div>
+<div><strong>1</strong><span>GPU: most studies are sized for a single local card</span></div>
+<div><strong>0</strong><span>private documents published; public data or design only</span></div>
+</section>
+
+<section class="section wrap" id="studies">
+<div class="section-head">
+<p class="eyebrow">01 / THE STUDIES</p>
+<h2>Every study,<br>one place.</h2>
+<p>Filter by practice area. Lab briefs open first where they exist; each card also links the longer case study or the code.</p>
+</div>
+
+<div class="lab-filters" role="group" aria-label="Filter studies by practice area">
+<button type="button" data-filter="all" aria-pressed="true">All</button>
+<button type="button" data-filter="eval" aria-pressed="false">Model evaluation</button>
+<button type="button" data-filter="perf" aria-pressed="false">Performance engineering</button>
+<button type="button" data-filter="data" aria-pressed="false">Data engineering</button>
+<button type="button" data-filter="arch" aria-pressed="false">Solution architecture</button>
+<button type="button" data-filter="consult" aria-pressed="false">AI consulting</button>
+</div>
+<p class="filter-count" aria-live="polite"><span id="study-count">16</span> shown</p>
+
+<ul class="study-grid">
+
+<li class="study lead" data-areas="eval perf consult">
+<p class="study-kind">Lab brief · Decision brief</p>
+<h3>Which model should read your documents?</h3>
+<p class="study-q">Which open-weight model reads each part of a mixed document (scanned text, tables, charts, legal clauses), what hardware it needs, and what that costs to run.</p>
+<p class="study-meta">Pre-registered evaluation on public benchmarks, sized for one NVIDIA L4 or L40S.</p>
+<div class="study-tags"><span class="area eval">Model evaluation</span><span class="area perf">Performance</span><span class="area">Consulting</span></div>
+<div class="study-links"><a href="https://tayler-erbe.github.io/test-ocr-work/">Brief ↗</a><a href="https://taylererbe.com/document-intelligence-evaluation.html">Case study ↗</a><a href="https://github.com/tayler-erbe/test-ocr-work">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="eval perf">
+<p class="study-kind">Lab brief · Model selection</p>
+<h3>Choosing an LLM for legislation extraction</h3>
+<p class="study-q">Which local model should pull structured facts out of bills, at what chunk size and concurrency, and how far one GPU goes before more hardware is needed.</p>
+<p class="study-meta">Four models, 141 benchmark runs on vLLM, one NVIDIA L4.</p>
+<div class="study-tags"><span class="area eval">Model evaluation</span><span class="area perf">Performance</span></div>
+<div class="study-links"><a href="https://tayler-erbe.github.io/vllm-inference-throughput-evaluation/brief/">Brief ↗</a><a href="https://taylererbe.com/vllm-inference-throughput-evaluation.html">Case study ↗</a><a href="https://github.com/tayler-erbe/vllm-inference-throughput-evaluation">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="perf eval">
+<p class="study-kind">Lab brief · Performance engineering</p>
+<h3>The GPU was idle. The server was the bottleneck.</h3>
+<p class="study-q">Why a vision model ran at a third of the GPU's capacity, and what changing the serving stack did to throughput on the same card.</p>
+<p class="study-meta">Ollama against vLLM, four concurrency levels, 2 Hz GPU telemetry.</p>
+<div class="study-tags"><span class="area perf">Performance</span><span class="area eval">Model evaluation</span></div>
+<div class="study-links"><a href="https://tayler-erbe.github.io/llava-vision-inference-backend-throughput-evaluation/brief/">Brief ↗</a><a href="https://taylererbe.com/archival-image-throughput-evaluation.html">Case study ↗</a><a href="https://github.com/tayler-erbe/llava-vision-inference-backend-throughput-evaluation">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="eval consult">
+<p class="study-kind">Lab brief · Research brief</p>
+<h3>Charts without guesswork</h3>
+<p class="study-q">Should accessible chart descriptions be generated by AI from a picture, or computed from the data behind the chart?</p>
+<p class="study-meta">Research and evaluation plan for accessible chart descriptions.</p>
+<div class="study-tags"><span class="area eval">Model evaluation</span><span class="area">Consulting</span></div>
+<div class="study-links"><a href="https://tayler-erbe.github.io/semantic-visualizations-for-access/brief/">Brief ↗</a><a href="https://github.com/tayler-erbe/semantic-visualizations-for-access">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="arch data">
+<p class="study-kind">Lab brief · System design</p>
+<h3>Intake pipeline design</h3>
+<p class="study-q">How a local pipeline reads piles of mixed documents on one GPU: one stage at a time, one model at a time, models swapped by configuration, nothing overwritten.</p>
+<p class="study-meta">Design only; tested on fictional documents. Accuracy not yet measured.</p>
+<div class="study-tags"><span class="area">Architecture</span><span class="area">Data engineering</span></div>
+<div class="study-links"><a href="https://tayler-erbe.github.io/intake-pipeline-lab-public/brief/">Brief ↗</a><a href="https://github.com/tayler-erbe/intake-pipeline-lab-public">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="arch data">
+<p class="study-kind">Lab brief · System design</p>
+<h3>Proposals and awards, read with evidence</h3>
+<p class="study-q">A review-assisted pipeline that reads research proposals and awards, extracts narrative facts with local models, and shows the evidence for every value.</p>
+<p class="study-meta">Builds on an earlier production NLP pipeline for proposal text.</p>
+<div class="study-tags"><span class="area">Architecture</span><span class="area">Data engineering</span></div>
+<div class="study-links"><a href="https://tayler-erbe.github.io/research-proposal-processing/pipeline/">Brief ↗</a><a href="https://taylererbe.com/research-proposal-processing.html">Earlier pipeline ↗</a></div>
+</li>
+
+<li class="study" data-areas="eval">
+<p class="study-kind">Case study · Model screening</p>
+<h3>Rule-bound generation on one GPU</h3>
+<p class="study-q">Screening local model configurations on a text generator that must pass its own automated checks, beside a public benchmark and speed and memory measurements.</p>
+<p class="study-meta">Pre-registered screening on one RTX 5090, with every limitation stated.</p>
+<div class="study-tags"><span class="area eval">Model evaluation</span></div>
+<div class="study-links"><a href="https://taylererbe.com/generation-model-evaluation.html">Case study ↗</a></div>
+</li>
+
+<li class="study" data-areas="consult eval">
+<p class="study-kind">Guide · Advisory</p>
+<h3>Choosing a local model</h3>
+<p class="study-q">How to find, select, evaluate, validate and fine-tune an open-weight model, and why a smaller model can beat a bigger one on your task.</p>
+<p class="study-meta">A practical guide for teams choosing their first local model.</p>
+<div class="study-tags"><span class="area">Consulting</span><span class="area eval">Model evaluation</span></div>
+<div class="study-links"><a href="https://taylererbe.com/choosing-local-models-guide.html">Guide ↗</a></div>
+</li>
+
+<li class="study" data-areas="data arch">
+<p class="study-kind">Case study · Production pipeline</p>
+<h3>Legislative data and prediction pipeline</h3>
+<p class="study-q">Ingesting bills daily, extracting features with a local LLM, and predicting passage, with a source-traced public handoff of the architecture.</p>
+<p class="study-meta">Running in production; public repository shares design, not data.</p>
+<div class="study-tags"><span class="area">Data engineering</span><span class="area">Architecture</span></div>
+<div class="study-links"><a href="https://taylererbe.com/legislative-pipeline.html">Technical docs ↗</a><a href="https://github.com/tayler-erbe/legislative-intelligence-platform-public">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="data">
+<p class="study-kind">Case study · Pipeline</p>
+<h3>Research proposal processing</h3>
+<p class="study-q">Turning proposal attachments into annotated, classified text that analysts can query by research field.</p>
+<p class="study-meta">End-to-end NLP pipeline with idempotent writes and printed rollback.</p>
+<div class="study-tags"><span class="area">Data engineering</span></div>
+<div class="study-links"><a href="https://taylererbe.com/research-proposal-processing.html">Case study ↗</a><a href="https://github.com/tayler-erbe/research-proposal-processing">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="data arch">
+<p class="study-kind">Case study · Pipeline</p>
+<h3>Email archiving and e-discovery</h3>
+<p class="study-q">Making decades of archived email searchable without exposing personal information, with every step run locally.</p>
+<p class="study-meta">Two-layer anonymization: entity detection, then local LLM summaries.</p>
+<div class="study-tags"><span class="area">Data engineering</span><span class="area">Architecture</span></div>
+<div class="study-links"><a href="https://taylererbe.com/email-archiving.html">Case study ↗</a><a href="https://github.com/tayler-erbe/email-archiving-ai-pipeline">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="data">
+<p class="study-kind">Case study · Pipeline</p>
+<h3>File archiving and smart search</h3>
+<p class="study-q">Extracting text from more than fifteen file types with local models, then searching a legacy archive by meaning.</p>
+<p class="study-meta">Cloud storage to local extraction to vector search.</p>
+<div class="study-tags"><span class="area">Data engineering</span></div>
+<div class="study-links"><a href="https://taylererbe.com/file-archiving-smart-search.html">Case study ↗</a><a href="https://github.com/tayler-erbe/legacy-archive-intelligence">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="data eval">
+<p class="study-kind">Case study · Pipeline</p>
+<h3>Archival image intelligence</h3>
+<p class="study-q">Flagging sensitive content in historical image scans, comparing similarity search against a vision-language model.</p>
+<p class="study-meta">12,125 archival images; metadata extraction and review interface.</p>
+<div class="study-tags"><span class="area">Data engineering</span><span class="area eval">Model evaluation</span></div>
+<div class="study-links"><a href="https://taylererbe.com/archival-image-intelligence.html">Case study ↗</a><a href="https://github.com/tayler-erbe/archival-image-intelligence">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="data eval">
+<p class="study-kind">Case study · OCR</p>
+<h3>Historical book OCR</h3>
+<p class="study-q">Reading about 22,700 pages of early printed books with self-hosted OCR and vision models on one workstation.</p>
+<p class="study-meta">Text and image extraction from early print.</p>
+<div class="study-tags"><span class="area">Data engineering</span><span class="area eval">Model evaluation</span></div>
+<div class="study-links"><a href="https://taylererbe.com/historical-book-ocr.html">Case study ↗</a></div>
+</li>
+
+<li class="study" data-areas="arch consult data">
+<p class="study-kind">Case study · System design</p>
+<h3>Procurement intelligence</h3>
+<p class="study-q">Finding defensible savings across distributor catalogs: exact matching first, semantic search second, and an LLM only for the equivalence judgment.</p>
+<p class="study-meta">Millions of catalog rows; prices compared in code, not by the model.</p>
+<div class="study-tags"><span class="area">Architecture</span><span class="area">Consulting</span><span class="area">Data engineering</span></div>
+<div class="study-links"><a href="https://taylererbe.com/procurement-intelligence.html">Case study ↗</a><a href="https://github.com/tayler-erbe/procurement_intelligence_system_design">Code ↗</a></div>
+</li>
+
+<li class="study" data-areas="consult data">
+<p class="study-kind">Framework · Advisory</p>
+<h3>Enterprise data readiness</h3>
+<p class="study-q">Why AI query tools are only as accurate as the semantic layer under them, and how to document a warehouse so a machine can use it.</p>
+<p class="study-meta">A framework for assessing tables, owners, joins and rules before AI.</p>
+<div class="study-tags"><span class="area">Consulting</span><span class="area">Data engineering</span></div>
+<div class="study-links"><a href="https://github.com/tayler-erbe/enterprise-data-readiness-framework">Framework ↗</a></div>
+</li>
+
+</ul>
+</section>
+
+<section class="use-section" id="practice">
+<div class="wrap">
+<div class="use-layout">
+<h2>Five practice areas.</h2>
+<div><p class="large-copy">The studies group into the kinds of work I do: deciding which model to use, making it run fast enough, building the pipeline around it, designing the whole system, and advising on what is worth building at all.</p></div>
+</div>
+<div class="roles-list">
+<article><h3>Model evaluation</h3><p>Fixed protocols, public benchmarks, failures counted, limits stated.</p></article>
+<article><h3>Performance engineering</h3><p>Throughput, latency, GPU use and cost, measured at the load that matters.</p></article>
+<article><h3>Data engineering</h3><p>Pipelines that turn documents into data a person can check.</p></article>
+<article><h3>Solution architecture</h3><p>Model routes, hardware and orchestration chosen from evidence.</p></article>
+<article><h3>AI consulting</h3><p>Trade-offs made plain, and a recommendation someone can act on.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section wrap" id="rules">
+<div class="section-head">
+<p class="eyebrow">02 / HOW THE LAB WORKS</p>
+<h2>What keeps the<br>results honest.</h2>
+<p>The newer studies follow these rules from the start. Older work is labelled where it differs.</p>
+</div>
+<div class="rules-grid">
+<article><span>01</span><h3>Public data or design only</h3><p>Private documents, extracted text and results from real-document runs stay on approved machines. What is published here is public-benchmark results, aggregates or design.</p></article>
+<article><span>02</span><h3>Method fixed before results</h3><p>Prompts, scoring, thresholds and decision rules are written down before a run. Changing one means a new, labelled protocol.</p></article>
+<article><span>03</span><h3>Every attempt counts</h3><p>Errors, timeouts and truncated outputs stay in the results as failures. Nothing is dropped to make a model look better.</p></article>
+<article><span>04</span><h3>Code checks, models point</h3><p>Accuracy is scored by code against labels, not by another model. Where an older study used an AI reviewer, it says so.</p></article>
+<article><span>05</span><h3>Measured at real load</h3><p>Speed is measured at the concurrency and document sizes the work will actually see, with GPU telemetry alongside.</p></article>
+<article><span>06</span><h3>Say what it does not show</h3><p>A benchmark result is not real-document accuracy, and a prototype is not a production approval. Each page states which it is.</p></article>
+</div>
+</section>
+
+<section class="section wrap" id="about" style="padding-top:20px">
+<div class="use-layout">
+<div><p class="eyebrow">ABOUT THE LAB</p><h2 style="font-size:clamp(30px,3vw,42px)">Tayler Erbe</h2></div>
+<div>
+<p class="large-copy" style="font-size:20px">I'm a data and AI engineer. I design, build and measure end-to-end systems that read documents with local AI, and I work directly with the people who will rely on them.</p>
+<p>The Lab collects my evaluation, performance and pipeline work in one place. My background, roles and other projects are on <a href="https://taylererbe.com/">taylererbe.com</a>; code is on <a href="https://github.com/tayler-erbe">GitHub</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="wrap">
+<div><strong>Document Intelligence Lab</strong><p>Tayler Erbe · Last updated 10 November 2026 · Public data and design only.</p></div>
+<a href="https://taylererbe.com/">taylererbe.com ↗</a>
+</footer>
+</body></html>
