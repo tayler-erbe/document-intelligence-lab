@@ -1,6 +1,8 @@
-# Document Intelligence Lab
+# Applied AI Lab
 
-The home page of Tayler Erbe's Document Intelligence Lab: model evaluations, inference performance studies, data pipelines and solution designs for reading documents with local AI.
+(Formerly the Document Intelligence Lab. The web address is unchanged.)
+
+The home page of Tayler Erbe's Applied AI Lab: model evaluations, inference performance studies, data pipelines and solution designs for documents and enterprise data, using local and hosted AI.
 
 **Live site:** https://tayler-erbe.github.io/document-intelligence-lab/
 
